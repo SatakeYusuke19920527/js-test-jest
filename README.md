@@ -39,3 +39,19 @@
 }
 5. src配下に__tests__を作成する。
 6. __tests__/**.test.ts と名前を設定する。
+7. npm install --save typescript ts-node
+8. 実行は./node_modules/.bin/ts-node src/index.tsを使用
+9. jest.config.ts
+    module.exports = {
+  "roots": [
+    "<rootDir>/src"
+  ],
+  "testMatch": [
+    "**/__tests__/**/*.+(ts|tsx|js)",
+    "**/?(*.)+(spec|test).+(ts|tsx|js)"
+  ],
+  "transform": {
+    "^.+\\.(ts|tsx)$": "ts-jest"
+  },
+}
+10. 
